@@ -6,9 +6,9 @@ defineProps({
 
 <template>
     <div v-for="(menu, i) in menus" :key="i">
-        <router-link v-scroll-to="`#${ menu.anchor }`" v-if="! menu.children" :to="menu.to" v-text="menu.text" class="block px-6 py-2 text-sky-400 font-medium hover:bg-sky-500 hover:text-slate-100 hover:font-semibold" />
+        <router-link v-scroll-to="`#${ menu.anchor }`" v-if="! menu.children" :to="menu.to" v-text="menu.text" class="block px-6 py-2 text-red-400 font-medium hover:bg-red-500 hover:text-slate-100 hover:font-semibold" />
         <div v-else>
-            <div class="px-6 py-2 text-sky-400 font-medium hover:bg-sky-500 hover:text-slate-100 hover:font-semibold flex justify-between gap-6 cursor-pointer" @click="menu.opened.value = ! menu.opened.value">
+            <div class="px-6 py-2 text-red-400 font-medium hover:bg-red-500 hover:text-slate-100 hover:font-semibold flex justify-between gap-6 cursor-pointer" @click="menu.opened.value = ! menu.opened.value">
                 <span v-text="menu.text"></span>
                 <i class="mdi" :class="{'mdi-chevron-down': ! menu.opened.value, 'mdi-chevron-up': menu.opened.value}"></i>
             </div>

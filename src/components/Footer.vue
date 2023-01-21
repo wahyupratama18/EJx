@@ -47,14 +47,14 @@ const socials = [{
 <template>
     <footer id="footer" class="bg-slate-900 p-8 md:p-12 grid grid-cols-1 md:grid-cols-5 gap-8 text-white">
         <div class="md:col-span-2">
-            <h2 class="text-3xl border-l-4 border-sky-300 font-bold pl-3 mb-5">Contact us:</h2>
+            <h2 class="text-3xl border-l-4 border-red-300 font-bold pl-3 mb-5">Contact us:</h2>
 
             <span>Stay connected with OIA UM</span>
 
             <!-- <img src="../assets/oia.png" alt="The Office of International Affairs" class="max-h-14"> -->
 
             <div class="flex gap-4 mt-4">
-                <a v-for="(social, i) in socials" :key="i" :title="social.title" :href="social.href" class="p-2 text-slate-700 bg-slate-100 rounded-full w-10 aspect-square flex items-center justify-center hover:bg-fest-blue/70 hover:text-slate-50 hover:bg-sky-400">
+                <a v-for="(social, i) in socials" :key="i" :title="social.title" :href="social.href" class="p-2 text-slate-700 bg-slate-100 rounded-full w-10 aspect-square flex items-center justify-center hover:bg-fest-blue/70 hover:text-slate-50 hover:bg-red-400">
                     <i :class="social.icon"></i>
                 </a>
             </div>
