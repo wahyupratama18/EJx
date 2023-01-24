@@ -4,38 +4,47 @@ const universities = [{
     name: 'Universitas Negeri Malang',
     url: 'https://um.ac.id',
     logo: 'universities/um.png',
+    image: 'universities/show-um.jpg',
 }, {
     name: 'Universitas Brawijaya',
     url: 'https://ub.ac.id',
     logo: 'universities/ub.png',
+    image: 'universities/show-ub.jpg',
 }, {
     name: 'Institut Teknologi Sepuluh Nopember',
     url: 'https://its.ac.id',
     logo: 'universities/its.png',
+    image: 'universities/show-its.jpg',
 }, {
     name: 'Universitas Airlangga',
     url: 'https://unair.ac.id',
     logo: 'universities/unair.png',
+    image: 'universities/show-unair.jpg',
 }, {
     name: 'UPN Veteran Jawa Timur',
     url: 'https://upnjatim.ac.id',
     logo: 'universities/upn.png',
+    image: 'universities/show-upn.jpg',
 }, {
     name: 'Universitas Negeri Surabaya',
     url: 'https://unesa.ac.id',
     logo: 'universities/unesa.png',
+    image: 'universities/show-unesa.jpg',
 }, {
     name: 'Universitas Trunojoyo',
     url: 'https://utm.ac.id',
     logo: 'universities/utm.png',
+    image: 'universities/show-utm.jpg',
 }, {
     name: 'UIN Sunan Ampel Surabaya',
     url: 'https://uinsby.ac.id',
     logo: 'universities/uinsa.png',
+    image: 'universities/show-uinsa.jpg',
 }, {
     name: 'Universitas Jember',
     url: 'https://unej.ac.id',
     logo: 'universities/unej.png',
+    image: 'universities/show-unej.jpg',
 }]
 
 const programs = [{
@@ -122,6 +131,30 @@ const dates = [{
     date: '21 June - 9 July, 2023'
 }]
 
+const requirements = [{
+    name: 'Eligilibity',
+    details: [
+        'Open for Public;',
+        'Being recommended by the International Office of Home University or Home Institution (template is provided).',
+    ]
+}, {
+    name: 'Required Documents (Students)',
+    details: [
+        'CV (in English);',
+        'Motivation Letter (in English; 200 words);',
+        'Able to speak in English;',
+        'Academic Transcript (all semesters for students);',
+        'Recommendation Letter (Download template <a href="https://drive.google.com/file/d/1s_EE_zoTIx5Y8BdPZpK6KIlgzs2iaqge/view?usp=sharing" target="_blank">here</a>);',
+        'Scan of Passport or Student Card.',
+    ]
+}, {
+    name: 'Required Documents (Non-Students)',
+    details: [
+        'Motivation Letter (in English);',
+        'Scan of Passport or Identity Card.',
+    ]
+}]
+
 const testimonials = [
     'testimonials/1.png',
     'testimonials/2.png',
@@ -202,4 +235,4 @@ const galleries = [
     'gallery/5.jpg',
 ]
 
-export { universities, topics, dates, programs, schedules, testimonials, galleries }
+export { universities, topics, dates, programs, schedules, requirements, testimonials, galleries }

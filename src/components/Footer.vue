@@ -53,7 +53,7 @@ const socials = [{
 
             <!-- <img src="../assets/oia.png" alt="The Office of International Affairs" class="max-h-14"> -->
 
-            <div class="flex gap-4 mt-4">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-4">
                 <a v-for="(social, i) in socials" :key="i" :title="social.title" :href="social.href" class="p-2 text-slate-700 bg-slate-100 rounded-full w-10 aspect-square flex items-center justify-center hover:bg-fest-blue/70 hover:text-slate-50 hover:bg-red-400">
                     <i :class="social.icon"></i>
                 </a>

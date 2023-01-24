@@ -32,6 +32,14 @@
   @apply bg-[url('/src/assets/bg-madura.png')] bg-center-cover;
 }
 
+.bg-tugu {
+  @apply bg-[url('src/assets/tugu.png')] bg-intact-bottom;
+}
+
+.bg-suroboyo {
+  @apply bg-[url('src/assets/suroboyo.png')] bg-intact-bottom;
+}
+
 .bg-center-cover {
   @apply bg-center bg-cover bg-intact min-h-screen;
 }
@@ -49,7 +57,7 @@ ul.timeline {
 }
 
 ul.timeline::before {
-  @apply content-['_'] inline-block absolute left-7 w-0.5 h-full z-20 bg-slate-200;
+  @apply content-['_'] inline-block absolute left-7 w-0.5 h-full z-[5] bg-slate-200;
 }
 
 ul.timeline>li {
@@ -57,7 +65,7 @@ ul.timeline>li {
 }
 
 ul.timeline>li::before {
-  @apply content-['_'] inline-block absolute rounded-full border-2 border-red-400 left-5 w-5 h-5 z-20 bg-white;
+  @apply content-['_'] inline-block absolute rounded-full border-2 border-red-400 left-5 w-5 h-5 z-10 bg-white;
 }
 
 .stick-time {
