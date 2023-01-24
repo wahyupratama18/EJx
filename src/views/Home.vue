@@ -206,7 +206,7 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <section id="organizers" class="p-6 lg:p-16 bg-batik">
+        <section id="universities" class="p-6 lg:p-16 bg-batik">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up" v-text="`Organized by`" />
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
