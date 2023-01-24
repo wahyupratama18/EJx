@@ -156,9 +156,9 @@ const requirements = [{
 }]
 
 const testimonials = [
-    'testimonials/1.png',
+    /* 'testimonials/1.png',
     'testimonials/2.png',
-    'testimonials/3.png',
+    'testimonials/3.png', */
 ]
 
 const galleries = [

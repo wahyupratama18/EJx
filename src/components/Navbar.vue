@@ -59,7 +59,7 @@ const menus = [{
         </button>
 
         <router-link to="/" v-scroll-to="'#welcome'" @click="closeSidebar()" class="flex-grow text-center">
-            <img src="icon.png" class="h-10" />
+            <img src="../assets/icon.png" class="h-10" />
         </router-link>
     </nav>
 

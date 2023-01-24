@@ -79,7 +79,7 @@ const changeYoutubeModal = (state) => {
                 </div>
 
                 <div class="flex items-center justify-center mb-6 md:mb-0" data-aos="fade-down">
-                    <img src="logo.png" alt="EJx" class="max-h-64">
+                    <img src="../assets/logo.png" alt="EJx" class="max-h-64">
                 </div>
             </div>
         </section>
@@ -183,7 +183,7 @@ const changeYoutubeModal = (state) => {
             </a>
         </section>
 
-        <section id="testimonials" class="p-8 lg:p-16 bg-batik">
+        <section id="testimonials" class="p-8 lg:p-16 bg-batik" v-if="testimonials.length > 0">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6 break-words" data-aos="fade-up" v-text="`Testimonials`" />
 
             <Splide :options="{

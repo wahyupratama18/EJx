@@ -33,11 +33,11 @@
 }
 
 .bg-tugu {
-  @apply bg-[url('src/assets/tugu.png')] bg-intact-bottom;
+  @apply bg-[url('/src/assets/tugu.png')] bg-intact-bottom;
 }
 
 .bg-suroboyo {
-  @apply bg-[url('src/assets/suroboyo.png')] bg-intact-bottom;
+  @apply bg-[url('/src/assets/suroboyo.png')] bg-intact-bottom;
 }
 
 .bg-center-cover {
