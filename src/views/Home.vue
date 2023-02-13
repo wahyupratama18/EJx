@@ -28,18 +28,18 @@ const changeYoutubeModal = (state) => {
                 <h2 class="text-4xl font-semibold my-4 text-red-500" data-aos="fade-right">(EJx) 2021</h2>
                 
                 <div class="flex justify-center my-6">
-                    <div class="bg-slate-50 py-3 px-6 rounded-md md:rounded-full grid grid-cols-3 sm:grid-cols-6 md:grid-cols-9 gap-3">
-                        <a :href="university.url" v-for="(university, i) in universities" :key="i" :class="{'sm:col-span-2 md:col-span-1': i > 5}">
+                    <div class="bg-slate-50 py-3 px-6 rounded-md md:rounded-full grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-3">
+                        <a :href="university.url" v-for="(university, i) in universities" :key="i" class="flex items-center justify-center">
                             <img :src="university.logo" :alt="university.name" class="h-10">
                         </a>
                     </div>
                 </div>
 
-                <div class="flex justify-center my-6">
+                <!-- <div class="flex justify-center my-6">
                     <Button class="rounded-full flex items-center !p-2 aspect-square w-12 h-12" @click="changeYoutubeModal(true)">
                         <i class="mdi mdi-play mdi-36px"></i>
                     </Button>
-                </div>
+                </div> -->
                 
                 <div class="flex justify-center">
                     <router-link v-scroll-to="'#requirements'" to="/" data-aos="fade-up">
@@ -50,15 +50,15 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <Modal v-show="youtubeModal === true" @close="changeYoutubeModal(false)" @keydown.esc="changeYoutubeModal(false)" modalClass="rounded-lg">
-            <!-- <template v-slot:header>
+        <!-- <Modal v-show="youtubeModal === true" @close="changeYoutubeModal(false)" @keydown.esc="changeYoutubeModal(false)" modalClass="rounded-lg">
+            <-- <template v-slot:header>
                 <div>
                     header
                 </div>
-            </template> -->
+            </template> --
 
             <iframe class="w-[75vh]" width="100%" height="315" src="https://www.youtube.com/embed/csWx7RcNh5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen />
-        </Modal>
+        </Modal> -->
 
         <section id="about" class="p-8 lg:p-16 min-h-screen bg-batik bg-slate-200">
             <h1 class="text-3xl font-bold border-l-4 border-red-400 pl-3" data-aos="fade-up">About EJx</h1>
@@ -106,7 +106,7 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <section id="topics" class="p-8 lg:p-16 bg-batik bg-slate-200">
+        <!-- <section id="topics" class="p-8 lg:p-16 bg-batik bg-slate-200">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">List of Topics</h2>
 
             <div v-for="(topic, i) in topics" :key="i">
@@ -127,21 +127,21 @@ const changeYoutubeModal = (state) => {
                 </div>
                 <hr class="border border-slate-50 my-4">
             </div>
-        </section>
+        </section> -->
         
-        <section id="schedules" class="p-8 lg:p-16 bg-suroboyo">
+        <section id="schedules" class="p-8 lg:p-16 bg-suroboyo bg-slate-200">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">Program Schedule</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-6 gap-5 mb-4 border-b pb-4" v-for="(schedule, i) in schedules" :key="i">
-                <div>
+            <div class="grid grid-cols-1 md:grid-cols-9 gap-5 mb-4 border-b pb-4" v-for="(schedule, i) in schedules" :key="i">
+                <div class="md:col-span-2">
                     <h4 class="font-medium" v-text="schedule.date" />
                     <h4 v-text="schedule.time" />
                 </div>
 
-                <div class="md:col-span-5">
-                    <div class="flex items-center gap-4">
-                        <img :src="schedule.icon ?? schedule.university?.logo" :alt="schedule.title" class="h-12">
-                        <div>
+                <div class="md:col-span-7">
+                    <div class="grid grid-cols-10 items-center gap-4">
+                        <img :src="schedule.icon ?? schedule.university?.logo" :alt="schedule.title" class="max-h-12 justify-self-center">
+                        <div class="col-span-9">
                             <h4 class="font-medium text-lg" v-text="schedule.title" />
                             <p class="italic" v-text="schedule.description ?? schedule.university?.name" />
                         </div>
@@ -151,7 +151,7 @@ const changeYoutubeModal = (state) => {
         </section>
 
         <section id="dates" class="p-8 lg:p-16 bg-medunten">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">Important Dates</h2>
+            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6">Important Dates</h2>
 
             <ul class="timeline">
                 <li class="flex flex-col md:flex-row md:justify-between" v-for="(date, i) in dates" :key="i">
@@ -161,7 +161,7 @@ const changeYoutubeModal = (state) => {
             </ul>
         </section>
 
-        <section id="requirements" class="p-8 lg:p-16 bg-tugu bg-slate-200">
+        <section id="requirements" class="p-8 lg:p-16 bg-batik bg-slate-200">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">Requirements</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ const changeYoutubeModal = (state) => {
         <section id="universities" class="p-6 lg:p-16 bg-batik">
             <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up" v-text="`Organized by`" />
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <a :href="university.url" target="_blank" v-for="(university, i) in universities" :key="i">
                     <img class="block object-cover object-center rounded-t-lg" :src="university.image" :alt="university.name" />
                     <h4 class="text-center bg-slate-800 text-white rounded-b-lg p-4" v-text="university.name" />

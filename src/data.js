@@ -45,6 +45,11 @@ const universities = [{
     url: 'https://unej.ac.id',
     logo: 'universities/unej.png',
     image: 'universities/show-unej.jpg',
+}, {
+    name: 'Universitas Islam Negeri Maulana Malik Ibrahim',
+    url: 'https://uin-malang.ac.id',
+    logo: 'universities/uin-maliki.png',
+    image: 'universities/show-uin-maliki.jpg',
 }]
 
 const programs = [{
@@ -97,21 +102,86 @@ const topics = [{
 })
 
 const schedules = [{
-    date: '21 February 2022',
-    time: '16:00 - 19:00 (GMT+7)',
+    date: '20 June 2022',
+    time: '08:30 - 10:00 (GMT+7)',
     title: 'Opening Ceremony',
     description: 'Welcoming Ceremony, Overview of General Program',
     icon: 'icon.png'
 }, {
-    date: '22 February 2022',
-    time: '16:00 - 19:00 (GMT+7)',
-    title: 'East Java Creative Industries: Learn from Surabaya & Banyuwangi',
+    date: '20 June 2022',
+    time: '10:00 - 20:00 (GMT+7)',
+    title: 'Smart City',
+    university_id: 2,
+}, {
+    date: '21 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Biotechnology Startup',
     university_id: 3,
 }, {
-    date: '23 February 2022',
-    time: '16:00 - 19:00 (GMT+7)',
-    title: 'Malangan Javanese and Walikan Language',
+    date: '22 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Culture',
+    university_id: 4,
+}, {
+    date: '23 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'The Dynamic Life of Pesantren: Indigenous Islamic Education of Indonesia',
+    university_id: 7,
+}, {
+    date: '24 - 25 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Personal Exploration',
+    icon: 'icon.png',
+}, {
+    date: '26 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Mangrove Conservation',
+    university_id: 6,
+}, {
+    date: '28 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Institutional Arrangement of Tobacco for Community Welfare and Tobacco for Health',
+    university_id: 8,
+}, {
+    date: '29 June 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Ied Adha',
+    icon: 'icon.png',
+}, {
+    date: '30 June - 1 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Personal Exploration',
+    icon: 'icon.png',
+}, {
+    date: '3 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Mainstreaming Ecotourism as An Integral Part of Sustainable Tourism',
+    university_id: 1,
+}, {
+    date: '4 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Malangan Heritage Preservation',
     university_id: 0,
+}, {
+    date: '5 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Malangese Cultures at Glance',
+    university_id: 9,
+}, {
+    date: '6 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Understanding Indonesian Language and Culture Diversity',
+    university_id: 5,
+}, {
+    date: '7 July 2022',
+    time: '08:30 - 11:30 (GMT+7)',
+    title: 'Final Project Presentation, Reflection, and Closing Ceremony',
+    icon: 'icon.png',
+}, {
+    date: '8 July 2022',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Departure to Australia',
+    icon: 'icon.png',
 }].map(schedule => {
     schedule.university = universities[schedule.university_id]
     return schedule
@@ -119,16 +189,16 @@ const schedules = [{
 
 const dates = [{
     title: 'Registration Deadline',
-    date: '1 February 2023'
-}, {
+    date: 'TBA'
+},/*  {
     title: 'Selection',
     date: 'May - June, 2023'
 }, {
     title: 'Result Announcement',
     date: 'June, 2023'
-}, {
+}, */ {
     title: 'EJx 2023',
-    date: '21 June - 9 July, 2023'
+    date: '20 June - 8 July, 2023'
 }]
 
 const requirements = [{
