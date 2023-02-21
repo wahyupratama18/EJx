@@ -25,7 +25,7 @@ const changeYoutubeModal = (state) => {
         <section id="welcome" class="min-h-screen bg-cover relative text-white bg-[url('/src/assets/background.jpg')] bg-[center_top] bg-no-repeat bg-fixed flex items-center">
             <div class="w-full text-center">
                 <h1 class="text-5xl font-bold uppercase break-words" data-aos="fade-down">East Java Exploration</h1>
-                <h2 class="text-4xl font-semibold my-4 text-red-500" data-aos="fade-right">(EJx) 2021</h2>
+                <h2 class="text-4xl font-semibold my-4 text-red-500" data-aos="fade-right">(EJx) 2023</h2>
                 
                 <div class="flex justify-center my-6">
                     <div class="bg-slate-50 py-3 px-6 rounded-md md:rounded-full grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-3">
