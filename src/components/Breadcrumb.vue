@@ -6,8 +6,8 @@ defineProps({
 </script>
 
 <template>
-    <section class="max-h-52 bg-no-repeat bg-center bg-cover h-[35vh]" style="background: url('background.jpg')">
-        <div class="bg-slate-900/60 text-right pt-20 text-white pr-8 max-h-52" style="height: 35vh;">
+    <section class="max-h-52 bg-[url('/gallery/24.jpg')] bg-no-repeat bg-center bg-cover h-[35vh]">
+        <div class="bg-rose-900/60 text-right pt-20 text-white pr-8 max-h-52" style="height: 35vh;">
             <h2 class="font-bold text-xl" v-text="title"></h2>
             <div>
                 <router-link :to="bread.to" v-for="(bread, i) in breads" :key="i">

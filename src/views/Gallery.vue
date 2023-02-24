@@ -17,7 +17,7 @@ import { galleries } from '../data'
     <section id="galleries" class="p-8 lg:p-16 min-h-screen">
         <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-8">
             <a :href="gallery" v-for="(gallery, i) in galleries" :key="i" target="_blank">
-                <img :src="gallery" alt="Documentation" class="block object-cover object-center w-full h-full rounded-lg">
+                <img v-lazy="gallery" alt="Documentation" class="block object-cover object-center w-full h-full rounded-lg">
             </a>
         </div>
     </section>

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import Apply from './views/Apply.vue'
 import NotFound from './views/NotFound.vue'
+import Schedule from './views/Schedule.vue'
 import Gallery from './views/Gallery.vue'
 
 const generateTags = (name, content) => {
@@ -47,6 +48,14 @@ const router = createRouter({
         component: Home,
         meta: {
             title: 'Home - East Java Exploration',
+            metaTags: homeTags
+        }
+    }, {
+        path: '/schedule',
+        name: 'Schedule',
+        component: Schedule,
+        meta: {
+            title: 'Time Schedule - East Java Exploration',
             metaTags: homeTags
         }
     }/* , {

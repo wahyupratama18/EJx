@@ -2,6 +2,7 @@
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 import { ref } from 'vue'
 import Button from '../components/Button.vue'
+import Heading from '../components/Heading.vue';
 import ToBe from '../components/ToBe.vue';
 import Modal from '../components/Modal.vue';
 import { universities, programs, topics, schedules, dates, requirements, testimonials, galleries } from '../data'
@@ -30,7 +31,7 @@ const changeYoutubeModal = (state) => {
                 <div class="flex justify-center my-6">
                     <div class="bg-slate-50 py-3 px-6 rounded-md md:rounded-full grid grid-cols-2 sm:grid-cols-5 md:grid-cols-10 gap-3">
                         <a :href="university.url" v-for="(university, i) in universities" :key="i" class="flex items-center justify-center">
-                            <img :src="university.logo" :alt="university.name" class="h-10">
+                            <img v-lazy="university.logo" :alt="university.name" class="h-10">
                         </a>
                     </div>
                 </div>
@@ -79,7 +80,7 @@ const changeYoutubeModal = (state) => {
                 </div>
 
                 <div class="flex items-center justify-center mb-6 md:mb-0" data-aos="fade-down">
-                    <img src="../assets/logo.png" alt="EJx" class="max-h-64">
+                    <img v-lazy="'src/assets/logo.png'" alt="EJx" class="max-h-64">
                 </div>
             </div>
         </section>
@@ -107,7 +108,7 @@ const changeYoutubeModal = (state) => {
         </section>
 
         <!-- <section id="topics" class="p-8 lg:p-16 bg-batik bg-slate-200">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">List of Topics</h2>
+            <Heading v-text="'List of Topics'" />
 
             <div v-for="(topic, i) in topics" :key="i">
                 <div :class="{'text-red-400 font-bold': topic.opened.value}" class="py-2 text-lg font-semibold flex justify-between gap-6 cursor-pointer" @click="topic.opened.value = ! topic.opened.value">
@@ -130,28 +131,53 @@ const changeYoutubeModal = (state) => {
         </section> -->
         
         <section id="schedules" class="p-8 lg:p-16 bg-suroboyo bg-slate-200">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">Program Schedule</h2>
+            <Heading v-text="'Program Schedule'" />
 
-            <div class="grid grid-cols-1 md:grid-cols-9 gap-5 mb-4 border-b pb-4" v-for="(schedule, i) in schedules" :key="i">
-                <div class="md:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-9 gap-y-5 mb-4 border-b" v-for="(schedule, i) in schedules" :key="i">
+                <div class="md:col-span-2 md:border-b md:border-red-400 mb:pb-4">
                     <h4 class="font-medium" v-text="schedule.date" />
                     <h4 v-text="schedule.time" />
                 </div>
 
-                <div class="md:col-span-7">
-                    <div class="grid grid-cols-10 items-center gap-4">
-                        <img :src="schedule.icon ?? schedule.university?.logo" :alt="schedule.title" class="max-h-12 justify-self-center">
-                        <div class="col-span-9">
-                            <h4 class="font-medium text-lg" v-text="schedule.title" />
+                <div class="md:col-span-7 border-b border-red-400 pb-4">
+                    <div class="flex gap-x-5 items-center"
+                    :class="{'cursor-pointer': schedule.lectures?.length > 0}"
+                    @click="schedule.opened ? schedule.opened.value = ! schedule.opened.value : ''">
+                        <img v-lazy="schedule.icon ?? schedule.university?.logo" :alt="schedule.title" class="max-h-12 justify-self-center">
+                        <h4>
+                            <span class="font-medium text-lg" v-text="schedule.title" />
+                            <i v-if="schedule.lectures?.length > 0" class="mdi" :class="{
+                                'mdi-chevron-down': ! schedule.opened.value,
+                                'mdi-chevron-up': schedule.opened.value
+                            }" />
+                            
                             <p class="italic" v-text="schedule.description ?? schedule.university?.name" />
-                        </div>
+                        </h4>
+                    </div>
+
+                    <div v-show="schedule.opened.value" v-if="schedule.lectures?.length > 0">
+                        <hr class="border-[.5px] border-slate-400 my-4">
+                        <h5 class="font-medium mb-2" v-text="'Agendas:'" />
+
+                        <ol class="list-decimal list-inside">
+                            <li v-text="lecture" v-for="(lecture, j) in schedule.lectures" :key="j" />
+                        </ol>
                     </div>
                 </div>
             </div>
+
+            <!-- <div class="flex justify-end mt-8">
+                <router-link v-scroll-to="`#app`" to="/schedule">
+                    <Button>
+                        <i class="mdi mdi-calendar"></i>
+                        Watch Full Schedule
+                    </Button>
+                </router-link>
+            </div> -->
         </section>
 
         <section id="dates" class="p-8 lg:p-16 bg-medunten">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6">Important Dates</h2>
+            <Heading v-text="'Important Dates'" />
 
             <ul class="timeline">
                 <li class="flex flex-col md:flex-row md:justify-between" v-for="(date, i) in dates" :key="i">
@@ -162,7 +188,7 @@ const changeYoutubeModal = (state) => {
         </section>
 
         <section id="requirements" class="p-8 lg:p-16 bg-batik bg-slate-200">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up">Requirements</h2>
+            <Heading v-text="'Requirements'" />
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div v-for="(requirement, i) in requirements" :key="i">
@@ -175,43 +201,47 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <section id="further" class="bg-red-500 p-8 lg:p-16 text-white text-center">
-            <h2 class="text-xl mb-4">Apply Now!</h2>
-
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSop0odo5CTmM6Xrn2TGspr6GzQsNdbtIP3SGDgoq0v-nQaA/viewform" target="_blan">
-                <Button>Click Here</Button>
-            </a>
+        <section id="further" class="bg-[url('/gallery/51.jpg')] bg-intact text-white text-center">
+            <div class="bg-rose-900/30 flex items-center justify-center min-h-screen p-8 lg:p-16">
+                <div>
+                    <h2 class="text-4xl mb-4 font-bold">Apply Now!</h2>
+        
+                    <a href="https://forms.gle/5J1vqgTmiYzHtPLL7" target="_blank">
+                        <Button>Click Here</Button>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="testimonials" class="p-8 lg:p-16 bg-batik" v-if="testimonials.length > 0">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6 break-words" data-aos="fade-up" v-text="`Testimonials`" />
+            <Heading v-text="'Testimonials'" />
 
             <Splide :options="{
                 autoplay: true,
                 rewind: true,
             }" aria-label="Testimonials carousel">
                 <SplideSlide v-for="(testimonial, index) in testimonials" :key="index">
-                    <img :src="testimonial" class="rounded-lg w-full">
+                    <img v-lazy="testimonial" class="rounded-lg w-full">
                 </SplideSlide>
             </Splide>
         </section>
 
         <section id="galleries" class="p-8 lg:p-16 bg-suroboyo bg-slate-200">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up" v-text="`Gallery`" />
+            <Heading v-text="'Gallery'" />
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
                 <a :href="gallery" target="_blank" v-for="(gallery, i) in galleries.slice(0, 12)" :key="i">
-                    <img class="block object-cover object-center w-full h-full rounded-lg" :src="gallery" alt="Gallery collections of EJx UM">
+                    <img class="block object-cover object-center w-full h-full rounded-lg" v-lazy="gallery" alt="Gallery collections of EJx UM">
                 </a>
             </div>
         </section>
 
         <section id="universities" class="p-6 lg:p-16 bg-batik">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3 mb-6" data-aos="fade-up" v-text="`Organized by`" />
+            <Heading v-text="'Organized by'" />
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <a :href="university.url" target="_blank" v-for="(university, i) in universities" :key="i">
-                    <img class="block object-cover object-center rounded-t-lg" :src="university.image" :alt="university.name" />
+                    <img class="block object-cover object-center rounded-t-lg" v-lazy="university.image" :alt="university.name" />
                     <h4 class="text-center bg-slate-800 text-white rounded-b-lg p-4" v-text="university.name" />
                 </a>
             </div>
