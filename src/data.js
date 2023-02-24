@@ -192,7 +192,7 @@ const schedules = [{
     icon: 'icon.png',
 }, {
     date: '30 June - 1 July 2023',
-    time: 'N/A (GMT+7)',
+    time: 'N/A',
     title: 'Personal Exploration',
     icon: 'icon.png',
 }, {
@@ -252,7 +252,7 @@ const schedules = [{
     ],
 }, {
     date: '8 July 2023',
-    time: '08:30 - 18:30 (GMT+7)',
+    time: 'N/A',
     title: 'Departure to Australia',
     icon: 'icon.png',
 }].map(schedule => {
@@ -308,25 +308,53 @@ const timeBlocks = [
     '18:00',
     '19:00',
     '20:00',
-].map(block => {
+].map((block, i) => {
     return {
         time: block,
         schedules: compressedSchedules.map(schedule => {
-            return schedule.details?.filter((detail, i) => detail.time == block)
+            return schedule.details?.filter((detail, j) => detail.time == block)
+        }).map((schedule, j) => {
+            if (schedule) {
+
+                if (schedule.lecture_id != undefined) {
+                    schedule.lecture = lectures[schedule.lecture_id]
+                    schedule.lecture.profile = profiles[schedule.lecture.profile_id]
+                }
+    
+                return schedule
+            }
+    
+            for (let index = 0; index < i; index++) {
+                const previous = blocks[index].schedules[j]
+                if (previous == undefined) {
+                    continue
+                }
+    
+                if (index + previous.block > i) {
+                    return 1
+                }
+            }
+    
+            return undefined
         })
     }
 })
 
+console.log(timeBlocks)
+
 const dates = [{
+//     title: 'Open Registration',
+//     date: '12 April 2023'
+// },{
     title: 'Registration Deadline',
-    date: 'TBA'
+    date: '12 April 2023'
 },/*  {
     title: 'Selection',
     date: 'May - June, 2023'
-}, {
-    title: 'Result Announcement',
-    date: 'June, 2023'
 }, */ {
+    title: 'Result Announcement',
+    date: '5 June, 2023'
+}, {
     title: 'EJx 2023',
     date: '20 June - 8 July, 2023'
 }]
