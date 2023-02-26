@@ -1006,6 +1006,13 @@ const schedules = [{
     time: 'N/A',
     title: 'Departure to Australia',
     icon: 'icon.png',
+    details: [{
+        time: '06:00',
+        block: 0,
+        span: 144,
+        date: '06:00 - 18:00',
+        agenda: 'Departure to Australia'
+    }]
 }].map(schedule => {
     schedule.university = universities[schedule.university_id]
     return schedule
