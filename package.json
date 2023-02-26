@@ -12,6 +12,7 @@
   "dependencies": {
     "@splidejs/vue-splide": "^0.6.12",
     "aos": "^2.3.4",
+    "collect.js": "^4.34.3",
     "vue": "^3.2.45",
     "vue-lazyload": "^3.0.0-rc.2",
     "vue-router": "^4.1.6",

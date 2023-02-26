@@ -166,14 +166,14 @@ const changeYoutubeModal = (state) => {
                 </div>
             </div>
 
-            <!-- <div class="flex justify-end mt-8">
+            <div class="flex justify-end mt-8">
                 <router-link v-scroll-to="`#app`" to="/schedule">
                     <Button>
                         <i class="mdi mdi-calendar"></i>
                         Watch Full Schedule
                     </Button>
                 </router-link>
-            </div> -->
+            </div>
         </section>
 
         <section id="dates" class="p-8 lg:p-16 bg-medunten">
