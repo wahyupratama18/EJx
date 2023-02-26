@@ -1009,8 +1009,8 @@ const schedules = [{
     details: [{
         time: '06:00',
         block: 0,
-        span: 144,
-        date: '06:00 - 18:00',
+        span: 168,
+        date: '06:00 - 20:00',
         agenda: 'Departure to Australia'
     }]
 }].map(schedule => {
