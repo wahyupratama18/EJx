@@ -76,7 +76,7 @@ const changeYoutubeModal = (state) => {
                 </div>
 
                 <div class="flex items-center justify-center mb-6 md:mb-0" data-aos="fade-down">
-                    <img v-lazy="'src/assets/logo.png'" alt="EJx" class="max-h-64">
+                    <img v-lazy="'logo.png'" alt="EJx" class="max-h-64">
                 </div>
             </div>
         </section>
