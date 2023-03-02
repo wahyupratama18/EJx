@@ -1055,7 +1055,7 @@ schedules.forEach(schedule => {
     }
 })
 
-console.log(compressedSchedules)
+// console.log(compressedSchedules)
 
 const timeBlocks = collect([
     '06:00',
