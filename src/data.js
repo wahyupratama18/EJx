@@ -65,13 +65,13 @@ const programs = [{
         'Upon registering, participants will be able to choose three out of nine materials that interest them;',
         'Those choices will be used to divide participants into 9 groups, which will determine their final projects;',
         'One group consists of 4-5 individuals, of which one of them is a student from the respective university;',
-        'Every participant must join a class in Google Classroom that will be provided by the committees.',
+        // 'Every participant must join a class in Google Classroom that will be provided by the committees.',
     ]
 }, {
     title: 'Lectures',
     contents: [
         'Every participant needs to take part in at least 80% of the lectures in order to obtain a certificate;',
-        'All information regarding the lectures (e.g., reminder, zoom link, summary form) will be posted in Google Classroom;',
+        // 'All information regarding the lectures (e.g., reminder, zoom link, summary form) will be posted in Google Classroom;',
         'Each lecture will last for 120 minutes;',
         'After every lecture, participants need to fill a summary form that must be submitted before the deadline approaches.',
     ]
@@ -1131,17 +1131,19 @@ const dates = [{
 const requirements = [{
     name: 'Eligilibity',
     details: [
-        'Open for Public;',
+        // 'Open for Public;',
         'Being recommended by the International Office of Home University or Home Institution (template is provided).',
+        'Good command of English',
+        'A strong desire to explore new places, meet new people and (expand/grow/further develop) inter-cultural communication skills'
     ]
 }, {
     name: 'Required Documents (Students)',
     details: [
-        'CV (in English);',
+        // 'CV (in English);',
         'Motivation Letter (in English; 200 words);',
         'Able to speak in English;',
         'Academic Transcript (all semesters for students);',
-        'Recommendation Letter (Download template <a href="https://drive.google.com/file/d/1s_EE_zoTIx5Y8BdPZpK6KIlgzs2iaqge/view?usp=sharing" target="_blank">here</a>);',
+        'Recommendation Letter (Download template <a href="https://docs.google.com/document/d/1wgDoINg31P4jRO1hebNu3MO993_xfhVy/edit?usp=sharing&ouid=110456921852231717325&rtpof=true&sd=true" target="_blank">here</a>);',
         'Scan of Passport or Student Card.',
     ]
 }, {

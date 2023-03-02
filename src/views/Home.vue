@@ -67,15 +67,11 @@ const changeYoutubeModal = (state) => {
             <div class="md:grid md:grid-cols-2 gap-6 w-full mt-6">
                 <div class="prose">
                     <p data-aos="fade-down">
-                        It is acknowledged that people-to-people connection is the foundation of sustainable collaboration and development. As well as enhancing youth mobility is believed would bring great benefit for mutual understanding and future collaboration among countries. In other hand, COVID-19 Pandemic makes physical mobility becomes impossible. Therefore, 9 East Java Universities are introducing East Java Exploration (EJx) through online platform.
+                        How much do you know about Indonesia? Have you been to East Java? Join us in exploring four regions of the eastern province in Java – Surabaya, the capital city of the province; Madura, popularly known as the Salt Island; Jember, the tobacco city; and Malang, the city with mildest climate in the region. Experience and learn a glimpse of Indonesia’s diversity: religion, culture, history, technology, and natural resources, through a two-week education safari hosted by ten major public universities in the province.
                     </p>
                     
                     <p data-aos="fade-down">
-                        This short program is designed as a general course with multidisciplinary approach for participants to explore East Java in various aspects. Through online series of lecture, discussion, case study, observation, and direct interaction with people from different background, participants would gain better understanding about East Java and its potential and challenges.
-                    </p>
-                    
-                    <p data-aos="fade-down">
-                        Each topic is designed in a online form in which participants will learn through online explanatioan and cases. It is expected that the program will enhance knowledge, insight, and cross-cultural understanding. There is no doubt that participants will gain memorable experiences through fun learning method.
+                        East Java Exploration (EJx) is designed as a general course with a multidisciplinary approach for participants to explore East Java in various aspects. Through culture tours and a series of lectures, discussion, and direct interaction with people from different backgrounds, participants will gain better understanding about East Java, also making friendships and networking for your future.
                     </p>
                 </div>
 
@@ -206,9 +202,12 @@ const changeYoutubeModal = (state) => {
                 <div>
                     <h2 class="text-4xl mb-4 font-bold">Apply Now!</h2>
         
-                    <a href="https://forms.gle/5J1vqgTmiYzHtPLL7" target="_blank">
-                        <Button>Click Here</Button>
-                    </a>
+                    <Button @click="opened = ! opened">Click Here</Button>
+
+                    <div class="text-center bg-slate-50 rounded-xl p-4 prose mt-6 shadow-lg" v-show="opened">
+                        Thank you for your interest in the East Java Exploration!
+                        Please speak with your home institution study abroad office/email before you apply, in your communication please quote WAEJUC
+                    </div>
                 </div>
             </div>
         </section>
