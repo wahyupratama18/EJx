@@ -1125,7 +1125,10 @@ const dates = [{
     date: '5 June, 2023'
 }, {
     title: 'EJx 2023',
-    date: '20 June - 8 July, 2023'
+    date: '20 June - 7 July, 2023'
+}, {
+    title: 'Departure to Australia',
+    date: '8 July, 2023'
 }]
 
 const requirements = [{
