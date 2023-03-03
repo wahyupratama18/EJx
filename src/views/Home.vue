@@ -97,7 +97,7 @@ const changeYoutubeModal = (state) => {
             </div>
 
             <div class="flex items-center justify-center my-6">
-                <a href="https://drive.google.com/file/d/1NYJ3eDUM1bEGQbp6_lTNVHa7WTaOwjtv/view?usp=sharing" target="_blank">
+                <a href="https://drive.google.com/file/d/1bS0R9YQbyL-Be7axC-Fj-C0dDnZxdqqS/view?usp=sharing" target="_blank">
                     <Button>Download Brochure</Button>
                 </a>
             </div>
