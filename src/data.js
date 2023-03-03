@@ -63,7 +63,7 @@ const programs = [{
     title: 'Grouping',
     contents: [
         'Upon registering, participants will be able to choose three out of nine materials that interest them;',
-        'Those choices will be used to divide participants into 9 groups, which will determine their final projects;',
+        'Those choices will be used to divide participants into 10 groups, which will determine their final projects;',
         'One group consists of 4-5 individuals, of which one of them is a student from the respective university;',
         // 'Every participant must join a class in Google Classroom that will be provided by the committees.',
     ]
