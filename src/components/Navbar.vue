@@ -31,7 +31,11 @@ const menus = [{
     text: 'About',
 }, {
     to: '/',
-    anchor: 'topics',
+    anchor: 'sdg',
+    text: 'SDGs Support',
+}, {
+    to: '/',
+    anchor: 'schedules',
     text: 'Topics',
 }, {
     to: '/',
@@ -53,13 +57,17 @@ const menus = [{
 </script>
 
 <template>
-    <nav class="fixed top-0 z-30 h-16 md:h-20 w-56 flex items-center gap-6 px-4 md:px-8 py-3 bg-slate-100 rounded-br-2xl shadow-lg">
+    <nav class="fixed top-0 z-30 h-16 md:h-20 w-56 flex items-center gap-6 px-4 md:px-8 py-3 bg-white rounded-br-2xl shadow-lg">
         <button type="button" @click="toggleSidebar()" @keydown.esc="closeSidebar()">
             <i class="mdi mdi-dots-grid text-xl" />
         </button>
 
         <router-link to="/" v-scroll-to="'#welcome'" @click="closeSidebar()" class="flex-grow text-center">
-            <img src="../assets/icon.png" class="h-10" />
+            <div class="flex items-center justify-between divide-x-2">
+                <img src="../assets/icon.png" class="h-10" />
+                <img src="../assets/sdg.png" class="h-10 pl-2.5" />
+            </div>
+            <small class="text-[4.5px]">We support the Sustainable Development Goals</small>
         </router-link>
     </nav>
 

@@ -62,7 +62,7 @@ const changeYoutubeModal = (state) => {
         </Modal> -->
 
         <section id="about" class="p-8 lg:p-16 min-h-screen bg-batik bg-slate-200">
-            <h1 class="text-3xl font-bold border-l-4 border-red-400 pl-3" data-aos="fade-up">About EJx</h1>
+            <Heading v-text="'About EJx'" />
             
             <div class="md:grid md:grid-cols-2 gap-6 w-full mt-6">
                 <div class="prose">
@@ -81,8 +81,33 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <section id="details" class="p-8 lg:p-16 min-h-screen bg-tugu">
-            <h2 class="text-3xl font-bold border-l-4 border-red-400 pl-3" data-aos="fade-up">Program Details</h2>
+        <section id="sdg" class="p-8 lg:p-16 min-h-screen bg-batik">
+            <Heading v-text="'Our Support to SDGs'" />
+
+            <div class="md:grid md:grid-cols-2 gap-6 w-full mt-6">
+                <div class="flex items-center justify-center mb-6 md:mb-0" data-aos="fade-down">
+                    <img v-lazy="'sdg/text.png'" alt="SDG" class="max-h-64">
+                </div>
+
+                <div class="prose">
+                    <p data-aos="fade-down">
+                        We proudly present EJx 2023 in order to support United Nations' Agenda for Sustainable Development in 2030 and Indonesia's commitment through Presidential Regulation Number 59 of 2017 concerning the Implementation of Achieving Sustainable Development Goals.
+                    </p>
+                    
+                    <p class="mb-2 pb-0" data-aos="fade-down">
+                        We expect to achieve the following goals through EJx:
+                    </p>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <img v-for="(item, index) in [4, 9, 11, 17]" :key="index" v-lazy="`sdg/${item}.png`" alt="SDG" class="max-h-64">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="details" class="p-8 lg:p-16 min-h-screen bg-tugu bg-slate-100">
+            <Heading v-text="'Program Details'" />
             <div class="grid grid-cols-1 md:grid-cols-6 gap-20 mt-8" data-aos="fade-down">
                 <!-- <img src="../assets/gkb.jpg" alt="Gedung Kuliah Bersama" class="rounded-lg"> -->
 
@@ -102,31 +127,8 @@ const changeYoutubeModal = (state) => {
                 </a>
             </div>
         </section>
-
-        <!-- <section id="topics" class="p-8 lg:p-16 bg-batik bg-slate-200">
-            <Heading v-text="'List of Topics'" />
-
-            <div v-for="(topic, i) in topics" :key="i">
-                <div :class="{'text-red-400 font-bold': topic.opened.value}" class="py-2 text-lg font-semibold flex justify-between gap-6 cursor-pointer" @click="topic.opened.value = ! topic.opened.value">
-                    <span v-text="topic.title"></span>
-                    <i class="mdi" :class="{'mdi-chevron-down': ! topic.opened.value, 'mdi-chevron-up': topic.opened.value}"></i>
-                </div>
-    
-                <div class="prose" v-show="topic.opened.value">
-                    <h3 class="font-medium text-lg">Synopsis</h3>
-                    <p v-html="topic.synopsis" class="mb-4" />
-    
-                    <h3 class="font-medium text-lg">Coordinator</h3>
-                    <p v-html="topic.coordinator" class="mb-4" />
-    
-                    <h3 class="font-medium text-lg">University</h3>
-                    <p v-html="topic.university.name" class="mb-4" />
-                </div>
-                <hr class="border border-slate-50 my-4">
-            </div>
-        </section> -->
         
-        <section id="schedules" class="p-8 lg:p-16 bg-suroboyo bg-slate-200">
+        <section id="schedules" class="p-8 lg:p-16 bg-suroboyo">
             <Heading v-text="'Program Schedule'" />
 
             <div class="grid grid-cols-1 md:grid-cols-9 gap-y-5 mb-4 border-b" v-for="(schedule, i) in schedules" :key="i">
@@ -172,7 +174,7 @@ const changeYoutubeModal = (state) => {
             </div>
         </section>
 
-        <section id="dates" class="p-8 lg:p-16 bg-medunten">
+        <section id="dates" class="p-8 lg:p-16 bg-medunten bg-slate-100">
             <Heading v-text="'Important Dates'" />
 
             <ul class="timeline">
@@ -219,8 +221,15 @@ const changeYoutubeModal = (state) => {
                 autoplay: true,
                 rewind: true,
             }" aria-label="Testimonials carousel">
-                <SplideSlide v-for="(testimonial, index) in testimonials" :key="index">
-                    <img v-lazy="testimonial" class="rounded-lg w-full">
+                <SplideSlide v-for="(testimonial, index) in testimonials" :key="index" class="flex items-center gap-x-4 px-10">
+                    <img v-lazy="testimonial.image" class="rounded-full h-40">
+
+                    <div class="prose w-full">
+                        <blockquote v-html="testimonial.description" />
+                        <p>
+                            <span v-text="testimonial.name" />, <i v-text="testimonial.university" />
+                        </p>
+                    </div>
                 </SplideSlide>
             </Splide>
         </section>

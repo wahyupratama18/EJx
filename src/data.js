@@ -229,7 +229,7 @@ const schedules = [{
 }, {
     date: '22 June 2023',
     time: '08:00 - 18:00 (GMT+7)',
-    title: 'Culture',
+    title: 'Surabaya, The Multicultural City',
     university_id: 4,
     opened: ref(true),
     lectures: [
@@ -1144,7 +1144,7 @@ const requirements = [{
     details: [
         // 'CV (in English);',
         'Motivation Letter (in English; 200 words);',
-        'Able to speak in English;',
+        // 'Able to speak in English;',
         'Academic Transcript (all semesters for students);',
         'Recommendation Letter (Download template <a href="https://docs.google.com/document/d/1wgDoINg31P4jRO1hebNu3MO993_xfhVy/edit?usp=sharing&ouid=110456921852231717325&rtpof=true&sd=true" target="_blank">here</a>);',
         'Scan of Passport or Student Card.',
@@ -1157,11 +1157,37 @@ const requirements = [{
     ]
 }]
 
-const testimonials = [
-    /* 'testimonials/1.png',
-    'testimonials/2.png',
-    'testimonials/3.png', */
-]
+const testimonials = [{
+    image: 'testimonials/1.png',
+    description: 'In this program, I made many international friends, and we are somehow connected even after the program. We create a short bonding and share knowledge through a lot of things. <br>I am very happy to be part of EJx 2020.',
+    name: 'Monica Morales',
+    university: 'Far Eastern University',
+}, {
+    image: 'testimonials/2.png',
+    description: 'I love all the topics in this program, I learn a lot about Indonesia and other parts of East Java. <br>Featured topics like ethnic groups and language help me to gain a new <br>perspective about Indonesia as well.',
+    name: 'Keren Joy Otanes',
+    university: 'Far Eastern University',
+}, {
+    image: 'testimonials/3.png',
+    description: 'The topics were so good, the experience and the journey during this program were really amazing.<br>I can\'t wait to spread the knowledge that I got to society.<br>I hope that I can join with this kind of event again.',
+    name: 'Arisandi Tri Hardiansyah',
+    university: 'Universitas Trunojoyo Madura',
+}, {
+    image: 'testimonials/4.png',
+    description: 'As a whole I feel that the program was a great success allowing participants the opportunity to network and form bonds with not only other students with their home country but also externally. I am very happy i participated in this program.',
+    name: 'Georgia Lender',
+    university: 'Edith Cowan University',
+}, {
+    image: 'testimonials/5.png',
+    description: 'I am very happy to be part of this program. studying during East Java Exploration gave me the opportunity to collaborate with Australian students in finding solutions about the problems faced by people in east java. From this activity i gained knowledge. Each university provided the best explanation to the topic.',
+    name: 'Dini Puji Rahayu',
+    university: 'UIN Maulana Malik Ibrahim',
+}, {
+    image: 'testimonials/6.png',
+    description: 'There was many interesting topics, from traditional to modern culture. By the end of the program, student delt that their knowledge had been expanded. i belive that all future students<br> will find many things to learn in this program.',
+    name: 'Jason Yong Yu',
+    university: 'The University of Western Australia',
+}]
 
 const galleries = [
     'gallery/42.jpg',
