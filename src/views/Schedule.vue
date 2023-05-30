@@ -5,6 +5,9 @@ import ToBe from '../components/ToBe.vue'
 import { timeBlocks, compressedSchedules } from '../data'
 import collect from 'collect.js';
 import ScheduleTd from '../components/ScheduleTd.vue';
+
+console.log(timeBlocks)
+console.log(compressedSchedules)
 </script>
 
 <template>
@@ -17,10 +20,10 @@ import ScheduleTd from '../components/ScheduleTd.vue';
     }]" />
     
     <section id="applications" class="p-8 lg:p-16 min-h-screen">
-        <Table class="[&_td]:border [&_td:not(.stick-time)]:min-w-[18rem] [&_td]:max-w-lg max-h-[85vh]" v-if="timeBlocks.count() > 0">
+        <Table class="[&_td:not(.stick-time)]:min-w-[18rem] [&_td]:max-w-lg max-h-[85vh]" v-if="timeBlocks.count() > 0">
             <thead>
                 <tr>
-                    <th class="stick-time" />
+                    <th class="stick-time p-2" />
                     <th class="sticky top-0 bg-slate-50" v-for="(schedule, i) in compressedSchedules" :key="i">
                         <h3 class="font-semibold" v-text="schedule.date"/>
                         <div class="flex items-center gap-x-3 mt-4">

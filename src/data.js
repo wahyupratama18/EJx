@@ -103,40 +103,40 @@ const topics = [{
 })
 
 const schedules = [{
-    date: '20 June 2023',
-    time: '08:30 - 10:30 (GMT+7)',
+    date: '27 June 2023',
+    time: '08:30 - 10:00 (GMT+7)',
     title: 'Opening Ceremony',
-    description: 'Welcoming Ceremony, Overview of General Program',
+    description: 'Opening and Welcome Ceremony',
     icon: 'icon.png',
     details: [{
-        time: '08:00',
+        time: '08:30',
         block: 6,
         span: 6,
-        date: '08:30 - 09:30',
-        agenda: 'Arriving at ITS & Registration'
+        date: '08:30 - 09:00',
+        agenda: 'Opening Program'
     }, {
         time: '09:00',
         block: 0,
-        span: 18,
-        date: '09:00 - 10:30',
-        agenda: 'Opening of EJx'
+        span: 12,
+        date: '09:00 - 10:00',
+        agenda: 'Welcoming Ceremony, Speech, Overview of East Java, Overview of General Program'
     }]
 }, {
-    date: '20 June 2023',
-    time: '10:30 - 20:00 (GMT+7)',
-    title: 'Smart City',
-    university_id: 2,
+    date: '27 June 2023',
+    time: '10:00 - 20:00 (GMT+7)',
+    title: 'Understanding Indonesian Language and Culture Diversity',
+    university_id: 5,
     opened: ref(true),
     lectures: [
-        'Smart City'
+        'Understanding Indonesian Language and Culture Diversity'
     ],
     details: [{
         time: '10:00',
-        block: 6,
-        span: 24,
-        date: '10:30 - 12:30',
-        agenda: 'Smart City<br><small class="text-sm">Progress and Challenges of Surabaya\' Endeavours toward Smart City</small>'
-    }, {
+        block: 0,
+        span: 120,
+        date: '10:00 - 20:00',
+        agenda: 'Understanding Indonesian Language and Culture Diversity'
+    },/*  {
         time: '12:00',
         block: 6,
         span: 12,
@@ -154,106 +154,54 @@ const schedules = [{
         span: 15,
         date: '18:45 - 20:00',
         agenda: 'Exploring Alun-Alun of Surabaya City & Ice Cream Time'
-    }]
+    } */]
 }, {
-    date: '21 June 2023',
+    date: '28 June 2023',
     time: '08:30 - 18:30 (GMT+7)',
-    title: 'Biotechnology Startup',
-    university_id: 3,
-    opened: ref(true),
-    lectures: [
-        'Biotechnology Startup in Indonesia: Opportunities and Challenges',
-        'Case Study of a Biotechnology Startup in Indonesia: Lessons Learned from Spiralife'
-    ],
-    details: [{
-        time: '08:00',
-        block: 0,
-        span: 6,
-        date: '08:00 - 08:30',
-        agenda: 'Heading to the B campus UNAIR'
-    }, {
-        time: '08:00',
-        block: 6,
-        span: 12,
-        date: '08:30 - 09:30',
-        agenda: 'Biotechnology Startup in Indonesia: Opportunities and Challenges'
-    }, {
-        time: '09:00',
-        block: 6,
-        span: 6,
-        date: '09:30 - 10:00',
-        agenda: 'Discussion and QnA'
-    }, {
-        time: '10:00',
-        block: 0,
-        span: 12,
-        date: '10:00 - 11:00',
-        agenda: 'Case Study of a Biotechnology Startup in Indonesia: Lessons Learned from Spiralife'
-    }, {
-        time: '11:00',
-        block: 0,
-        span: 6,
-        date: '11:00 - 11:30',
-        agenda: 'Discussion and QnA'
-    }, {
-        time: '11:00',
-        block: 6,
-        span: 12,
-        date: '11:30 - 12:30',
-        agenda: 'Lunch Break'
-    }, {
-        time: '12:00',
-        block: 6,
-        span: 12,
-        date: '12:30 - 13:30',
-        agenda: 'Heading to PT. Petrokimia Gresik'
-    }, {
-        time: '13:00',
-        block: 6,
-        span: 24,
-        date: '13:30 - 15:30',
-        agenda: 'Excursion Activity at PT. Petrokimia Gresik'
-    }, {
-        time: '16:00',
-        block: 0,
-        span: 12,
-        date: '16:00 - 17:00',
-        agenda: 'Shopping for Gresik Souvenirs'
-    }, {
-        time: '17:00',
-        block: 0,
-        span: 12,
-        date: '17:00 - 18:00',
-        agenda: 'Heading back to Surabaya'
-    }]
-}, {
-    date: '22 June 2023',
-    time: '08:00 - 18:00 (GMT+7)',
-    title: 'Surabaya, The Multicultural City',
+    title: 'Surabaya, the Multicultural City',
     university_id: 4,
     opened: ref(true),
     lectures: [
-        'East Javanese Culture and Languages'
+        'Surabaya, the Multicultural City'
+        // 'Biotechnology Startup in Indonesia: Opportunities and Challenges',
+        // 'Case Study of a Biotechnology Startup in Indonesia: Lessons Learned from Spiralife'
     ],
     details: [{
-        time: '07:00',
-        block: 0,
-        span: 12,
-        date: '07:00 - 08:00',
-        agenda: 'Heading to UPN'
-    }, {
         time: '08:00',
         block: 0,
-        span: 6,
-        date: '08:00 - 08:30',
-        agenda: 'Registration'
+        span: 120,
+        date: '08:00 - 18:30',
+        agenda: 'Surabaya, the Multicultural City',
+    }]
+}, {
+    date: '29 June 2023',
+    time: '08:00 - 18:00 (GMT+7)',
+    title: 'City Tour',
+    university_id: 2,
+    opened: ref(true),
+    lectures: [
+        'Surabaya City Tour',
+        'Trip to Jember',
+    ],
+    details: [{
+        time: '06:00',
+        block: 0,
+        span: 72,
+        date: '06:00 - 12:00',
+        agenda: 'Surabaya City Tour'
     }, {
-        time: '08:00',
-        block: 6,
-        span: 6,
-        date: '08:30 - 09:00',
-        agenda: 'Opening Remarks'
+        time: '12:00',
+        block: 0,
+        span: 9,
+        date: '12:00 - 12:47',
+        agenda: 'Depart to Surabaya Gubeng Station'
     }, {
+        time: '13:00',
+        block: 9,
+        span: 47,
+        date: '13:47 - 17:40',
+        agenda: 'Trip to Jember by Train'
+    }/* , {
         time: '09:00',
         block: 0,
         span: 12,
@@ -307,26 +255,27 @@ const schedules = [{
         span: 12,
         date: '16:30 - 17:30',
         agenda: 'Return to the hotel'
-    }]
+    } */]
 }, {
-    date: '23 June 2023',
-    time: '09:00 - 18:00 (GMT+7)',
-    title: 'The Dynamic Life of Pesantren: Indigenous Islamic Education of Indonesia',
-    university_id: 7,
+    date: '30 June 2023',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Site visit',
+    university_id: 8,
     opened: ref(true),
     lectures: [
-        'The dynamic life of Pesantren: Indigenous Islamic education of Indonesia ',
-        'Cultural activities: Learning Rebana',
-        'Education system, type and activities in Pesantren',
-        'Cultural activities: Traditional costume in Pesantren'
+        'Site visit',
+        // 'The dynamic life of Pesantren: Indigenous Islamic education of Indonesia ',
+        // 'Cultural activities: Learning Rebana',
+        // 'Education system, type and activities in Pesantren',
+        // 'Cultural activities: Traditional costume in Pesantren'
     ],
     details: [{
-        time: '09:00',
-        block: 0,
-        span: 6,
-        date: '09:00 - 09:30',
-        agenda: 'Opening Ceremony'
-    }, {
+        time: '08:00',
+        block: 6,
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'Site visit and sunset'
+    }/* , {
         time: '09:00',
         block: 6,
         span: 2,
@@ -380,29 +329,30 @@ const schedules = [{
         span: 12,
         date: '17:00 - 18:00',
         agenda: 'Back to Hotel'
-    }]
+    } */]
+// }, {
+//     date: '24 - 25 June 2023',
+//     time: 'N/A',
+//     title: 'Personal Exploration',
+//     icon: 'icon.png',
 }, {
-    date: '24 - 25 June 2023',
-    time: 'N/A',
-    title: 'Personal Exploration',
-    icon: 'icon.png',
-}, {
-    date: '26 June 2023',
-    time: '08:00 - 15:00 (GMT+7)',
-    title: 'Mangrove Conservation',
-    university_id: 6,
+    date: '1 July 2023',
+    time: '08:30 - 15:30 (GMT+7)',
+    title: 'Institutional Arrangement of Tobacco for Community Welfare and Tobacco for Health',
+    university_id: 8,
     opened: ref(true),
     lectures: [
-        'Mangrove Conservation',
-        'Mangrove Planting at Taman Pendidikan Mangrove Labuhan'
+        'Institutional Arrangement of Tobacco for Community Welfare and Tobacco for Health',
+        /* 'Mangrove Conservation',
+        'Mangrove Planting at Taman Pendidikan Mangrove Labuhan' */
     ],
     details: [{
         time: '08:00',
-        block: 0,
-        span: 3,
-        date: '08:00 - 08:15',
-        agenda: 'Check in'
-    }, {
+        block: 6,
+        span: 84,
+        date: '08:30 - 15:30',
+        agenda: 'Institutional Arrangement of Tobacco for Community Welfare and Tobacco for Health'
+    }/* , {
         time: '08:00',
         block: 3,
         span: 3,
@@ -456,9 +406,9 @@ const schedules = [{
         span: 12,
         date: '14:00 - 15:00',
         agenda: 'Heading back to UTM'
-    }]
-}, {
-    date: '28 June 2023',
+    } */]
+}, /* {
+    date: '28 blah 2023',
     time: '07:00 - 18:00 (GMT+7)',
     title: 'Institutional Arrangement of Tobacco for Community Welfare and Tobacco for Health',
     university_id: 8,
@@ -540,18 +490,18 @@ const schedules = [{
         date: '17:30 - 18:00',
         agenda: 'Return to the hotel'
     }]
-}, {
-    date: '29 June 2023',
-    time: '07:00 - 17:00 (GMT+7)',
-    title: 'Ied Adha',
+}, */ {
+    date: '2 July 2023',
+    time: '08:01 - 12:45 (GMT+7)',
+    title: 'Trip to Malang by train',
     icon: 'icon.png',
     details: [{
-        time: '07:00',
+        time: '08:00',
         block: 0,
-        span: 60,
-        date: '07:00 - 12:00',
-        agenda: 'Personal Exploration & Eid Celebration'
-    }, {
+        span: 57,
+        date: '08:01 - 12:45',
+        agenda: 'Trip to Malang by train'
+    }/* , {
         time: '12:00',
         block: 0,
         span: 12,
@@ -575,30 +525,31 @@ const schedules = [{
         span: 12,
         date: '16:00 - 17:00',
         agenda: 'Heading back to hotel'
-    }]
-}, {
+    } */]
+},/*  {
     date: '30 June - 1 July 2023',
     time: 'N/A',
     title: 'Personal Exploration',
     icon: 'icon.png',
-}, {
+}, */ {
     date: '3 July 2023',
     time: '08:30 - 18:45 (GMT+7)',
     title: 'Mainstreaming Ecotourism as An Integral Part of Sustainable Tourism',
     university_id: 1,
     opened: ref(true),
     lectures: [
-        'Integrating a sustainable approach to eco-tourism practices in Malang',
+        'Mainstreaming Ecotourism as An Integral Part of Sustainable Tourism',
+        /* 'Integrating a sustainable approach to eco-tourism practices in Malang',
         'Case Study and Best Practice to sustainable tourism',
-        'Practice of sustainable ecotourism management system in Kaliandra'
+        'Practice of sustainable ecotourism management system in Kaliandra' */
     ],
     details: [{
-        time: '08:30',
+        time: '08:00',
         block: 6,
-        span: 6,
-        date: '08:30 - 09:00',
-        agenda: 'Registration'
-    }, {
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'Mainstreaming Ecotourism as An Integral Part of Sustainable Tourism'
+    },/*  {
         time: '09:00',
         block: 0,
         span: 6,
@@ -658,7 +609,7 @@ const schedules = [{
         span: 9,
         date: '18:00 - 18:45',
         agenda: 'Heading back to hotel'
-    }]
+    } */]
 }, {
     date: '4 July 2023',
     time: '07:00 - 19:00 (GMT+7)',
@@ -666,16 +617,17 @@ const schedules = [{
     university_id: 0,
     opened: ref(true),
     lectures: [
-        'Kajoetangan historical tourism preservation',
-        'Historical Visit : Kajoetangan historical tourism preservation',
+        'Space and Memory: Preserving Malang Heritage',
+        /* 'Kajoetangan historical tourism preservation',
+        'Historical Visit : Kajoetangan historical tourism preservation', */
     ],
     details: [{
-        time: '07:00',
-        block: 0,
-        span: 12,
-        date: '07:00 - 08:00',
-        agenda: 'Heading to UM'
-    }, {
+        time: '08:00',
+        block: 6,
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'Space and Memory: Preserving Malang Heritage'
+    }/* , {
         time: '08:00',
         block: 0,
         span: 6,
@@ -735,32 +687,33 @@ const schedules = [{
         span: 6,
         date: '18:30 - 19:00',
         agenda: 'Return to Hotel'
-    }]
+    } */]
 }, {
     date: '5 July 2023',
     time: '06:30 - 18:30 (GMT+7)',
-    title: 'Malangese Cultures at Glance',
+    title: 'Malangan Heritage Preservation',
     university_id: 9,
     opened: ref(true),
     lectures: [
-        'Malangese Culture',
+        'Malangan Heritage Preservation',
+        /* 'Malangese Culture',
         'Site visit to Batik Malang Gallery and/or Sentra Topeng Malang',
         'Cultural Practice: Folk Dance',
-        'Ma\'had al-Jami\'ah Tour'
+        'Ma\'had al-Jami\'ah Tour' */
     ],
     details: [{
-        time: '06:00',
+        time: '08:00',
         block: 6,
-        span: 6,
-        date: '06:30 - 07:00',
-        agenda: 'Heading to UIN'
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'Malangan Heritage Preservation'
     }, {
-        time: '07:00',
-        block: 0,
-        span: 6,
-        date: '07:00 - 07:30',
-        agenda: 'Welcoming Ceremony'
-    }, {
+        time: '18:00',
+        block: 6,
+        span: 30,
+        date: '18:30 - 21:30',
+        agenda: 'Trip to Surabaya by Bus'
+    }/* , {
         time: '07:00',
         block: 6,
         span: 12,
@@ -814,26 +767,26 @@ const schedules = [{
         span: 12,
         date: '17:30 - 18:30',
         agenda: 'Heading back to hotel'
-    }]
+    } */]
 }, {
     date: '6 July 2023',
-    time: '06:00 - 18:00 (GMT+7)',
-    title: 'Understanding Indonesian Language and Culture Diversity',
-    university_id: 5,
+    time: '07:00 - 09:00 (GMT+7)',
+    title: 'Trip to Madura by Bus',
+    university_id: 2,
     opened: ref(true),
-    lectures: [
+    /* lectures: [
         'Cultural Diversity',
         'Beginner Indonesian Language and Quiz',
         'Art Lecture',
         'Sport Immersion'
-    ],
+    ], */
     details: [{
-        time: '06:00',
+        time: '07:00',
         block: 0,
-        span: 12,
-        date: '06:00 - 07:00',
-        agenda: 'Heading to UNESA'
-    }, {
+        span: 24,
+        date: '07:00 - 09:00',
+        agenda: 'Trip to Madura by Bus'
+    }/* , {
         time: '07:00',
         block: 0,
         span: 2,
@@ -935,24 +888,39 @@ const schedules = [{
         span: 12,
         date: '17:00 - 18:00',
         agenda: 'Heading back to Hotel'
+    } */]
+}, {
+    date: '6 July 2023',
+    time: '09:00 - 19:00 (GMT+7)',
+    title: 'Mangrove Conservation',
+    university_id: 6,
+    opened: ref(true),
+    lectures: [
+        'Mangrove Conservation',
+    ],
+    details: [{
+        time: '09:00',
+        block: 0,
+        span: 120,
+        date: '09:00 - 19:00',
+        agenda: 'Mangrove Conservation'
     }]
 }, {
     date: '7 July 2023',
-    time: '06:00 - 15:00 (GMT+7)',
-    title: 'Final Project Presentation, Reflection, and Closing Ceremony',
-    icon: 'icon.png',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'Smart City',
+    university_id: 2,
     opened: ref(true),
     lectures: [
-        'Group Project Presentations',
-        'Best Project Announcement'
+        'Smart City',
     ],
     details: [{
-        time: '06:00',
+        time: '08:00',
         block: 0,
-        span: 12,
-        date: '06:00 - 07:00',
-        agenda: 'Heading to UNESA'
-    }, {
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'Smart City'
+    }/* , {
         time: '07:00',
         block: 0,
         span: 6,
@@ -1000,9 +968,71 @@ const schedules = [{
         span: 3,
         date: '14:00 - 14:15',
         agenda: 'Closing'
-    }]
+    } */]
 }, {
     date: '8 July 2023',
+    time: '08:30 - 18:30 (GMT+7)',
+    title: 'The Dynamic Life of Pesantren: Indigenous Islamic Education of Indonesia',
+    university_id: 7,
+    opened: ref(true),
+    lectures: [
+        'The Dynamic Life of Pesantren: Indigenous Islamic Education of Indonesia',
+    ],
+    details: [{
+        time: '08:00',
+        block: 0,
+        span: 120,
+        date: '08:30 - 18:30',
+        agenda: 'The Dynamic Life of Pesantren: Indigenous Islamic Education of Indonesia'
+    }]
+}, {
+    date: '9 July 2023',
+    time: 'N/A',
+    title: 'Free time',
+    icon: 'icon.png',
+}, {
+    date: '10 July 2023',
+    time: '08:30 - 20:30 (GMT+7)',
+    title: 'Biotechnology Startup',
+    university_id: 3,
+    opened: ref(true),
+    lectures: [
+        'Biotechnology Startup in Indonesia: Opportunities and Challenges',
+        // 'Case Study of a Biotechnology Startup in Indonesia: Lessons Learned from Spiralife'
+    ],
+    details: [{
+        time: '08:00',
+        block: 0,
+        span: 42,
+        date: '08:30 - 12:00',
+        agenda: 'Biotechnology Startup',
+    }, {
+        time: '12:00',
+        block: 0,
+        span: 12,
+        date: '12:00 - 13:00',
+        agenda: 'Lunch',
+    }, {
+        time: '13:00',
+        block: 0,
+        span: 36,
+        date: '13:00 - 16:00',
+        agenda: 'Final Project Presentation',
+    }]
+}, {
+    date: '10 July 2023',
+    time: '18:30 - 20:30 (GMT+7)',
+    title: 'Closing Dinner',
+    icon: 'icon.png',
+    details: [{
+        time: '18:00',
+        block: 6,
+        span: 24,
+        date: '18:30 - 20:30',
+        agenda: 'Closing Dinner',
+    }]
+}, {
+    date: '11 July 2023',
     time: 'N/A',
     title: 'Departure to Australia',
     icon: 'icon.png',
@@ -1081,7 +1111,7 @@ timeBlocks.transform((block, i) => {
         schedules: compressedSchedules.map(schedule => {
             return schedule.details?.filter((detail, j) => detail.time == block)
         }),
-        blocked: Array(timeBlocks.count()).fill(null).map(() => Array(12).fill(undefined))
+        blocked: Array(timeBlocks.count()).fill(null).map(() => Array(12/* 4 */).fill(undefined))
     }
 })
 
@@ -1115,20 +1145,20 @@ const dates = [{
 //     title: 'Open Registration',
 //     date: '12 April 2023'
 // },{
-    title: 'Registration Deadline',
-    date: '12 April 2023'
-},/*  {
-    title: 'Selection',
-    date: 'May - June, 2023'
-}, */ {
-    title: 'Result Announcement',
-    date: '5 June, 2023'
+//     title: 'Registration Deadline',
+//     date: '12 April 2023'
+// }, {
+//     title: 'Selection',
+//     date: 'May - June, 2023'
+// }, {
+    title: 'Arrival in East Java',
+    date: '26 June, 2023'
 }, {
     title: 'EJx 2023',
-    date: '20 June - 7 July, 2023'
+    date: '27 June - 10 July, 2023'
 }, {
     title: 'Departure to Australia',
-    date: '8 July, 2023'
+    date: '11 July, 2023'
 }]
 
 const requirements = [{
